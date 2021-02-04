@@ -7,13 +7,13 @@ const routes = [
         path: '/', redirect: '/login' 
     },
     {
-        path: '/login', name: 'showLogin', component: require('./components/Login.vue').default
+        path: '/login', name: 'Login', component: require('./components/Login.vue').default
     },
     {
-        path: '/register', name: 'showRegister', component: require('./components/Register.vue').default
+        path: '/register', name: 'Register', component: require('./components/Register.vue').default
     },
     {
-        path: '/messages', name: 'showMessages', component: require('./components/Messages.vue').default
+        path: '/message', name: 'Message', component: require('./components/Message.vue').default
     }
 ]
 

@@ -1,10 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
-import VueRouter from 'vue-router'
 
+// vue router
+import VueRouter from 'vue-router'
+Vue.use(VueRouter)
 import router from './router'
 
-Vue.use(VueRouter)
+// socket io
+// import io from 'socket.io-client'
+// Vue.prototype.$socket = io('localhost:5000')
 
 Vue.config.productionTip = false
 

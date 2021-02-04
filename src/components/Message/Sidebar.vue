@@ -11,7 +11,6 @@
                 <div class="flex-grow-1 ml-3">
                     {{user.first_name + " " + user.last_name}}
                     <div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
-                    <!-- <div class="small"><span class="fas fa-circle chat-offline"></span> Offline</div> -->
                 </div>
             </div>
         </a>
@@ -25,14 +24,16 @@ import axios from 'axios';
 
 export default {
   name: 'Sidebar',
+  
   data() {
       return {
-          users: [],
+        users: [],
         currentUserId: localStorage.getItem('userid'),
       }
   },
+
   mounted() {
-      this.getAllUsers()
+    this.getAllUsers()
   },
 
   methods: {
