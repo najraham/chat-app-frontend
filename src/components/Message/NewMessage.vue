@@ -40,7 +40,9 @@ export default {
 
   methods: {
     sendMessage() {
-      this.socket.emit("sendMessage", this.message);
+      this.socket.emit("sendMessage", {
+        message: this.message,
+        token: localStorage.getItem('token')});
       this.message.content = "";
     }
   }

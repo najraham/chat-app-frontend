@@ -73,8 +73,9 @@ export default {
           password: this.password,
         })
         .then((res) => {
+          localStorage.setItem("token", res.data.token);
+          localStorage.setItem("userid", res.data.user._id);
           router.push("/message");
-          localStorage.setItem("userid", res.data._id);
         });
     }
   }

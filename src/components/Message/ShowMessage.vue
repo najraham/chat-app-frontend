@@ -40,7 +40,6 @@
 import EventBus from "../../eventBus";
 import NewMessage from "../Message/NewMessage";
 import Vue from "vue";
-// import socket from "../../socket";
 
 export default {
   name: "Message",
@@ -92,6 +91,7 @@ export default {
       this.socket.emit("loadUserMessage", {
         sender_id: this.currentUserId,
         receiver_id: this.receiver.id,
+        token: localStorage.getItem('token')
       });
     }
   }

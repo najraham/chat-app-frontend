@@ -38,7 +38,12 @@ export default {
 
   methods: {
     getAllUsers() {
-        axios.get('http://localhost:5000/api/users')
+        axios.get('http://localhost:5000/api/users', 
+        {
+            headers: {
+                "Authorization": "Bearer " + localStorage.getItem("token")
+            }
+        })
         .then((res) => {
             this.users = res.data.filter( user => user._id != this.currentUserId )
         })
